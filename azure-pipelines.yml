@@ -8,7 +8,7 @@ jobs:
   pool:
     vmImage: 'Ubuntu 16.04'
   strategy:
-    parallel: 2
+    parallel: 3
 
   steps:
   - task: UsePythonVersion@0
