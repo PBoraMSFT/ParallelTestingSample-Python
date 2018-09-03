@@ -14,7 +14,7 @@ jobs:
   - task: UsePythonVersion@0
     displayName: 'Use Python 3.x'
 
-  - script: 'python -m pip install --upgrade pip && pip install -r $(System.DefaultWorkingDirectory)\requirements.txt' 
+  - script: 'python -m pip install --upgrade pip && pip install -r $(System.DefaultWorkingDirectory)/requirements.txt' 
     displayName: 'Install dependencies'
 
   - powershell: ./DistributeTests.ps1 
