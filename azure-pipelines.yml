@@ -5,8 +5,7 @@
 jobs:
 
 - job: 'ParallelTesting'
-  pool:
-    vmImage: 'Ubuntu 16.04'
+  pool: 'Hosted VS2017'
   strategy:
     parallel: 3
 
