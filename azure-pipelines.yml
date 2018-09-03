@@ -4,7 +4,7 @@
 
 jobs:
 
-- job: 'Parallel Testing Job'
+- job: 'ParallelTesting'
   pool:
     vmImage: 'Ubuntu 16.04'
   strategy:
@@ -21,8 +21,8 @@ jobs:
     displayName: 'PowerShell Script to distribute tests'
 
   - script: |
-      echo %pytestfiles%
-      pip install pytest && pytest %pytestfiles% --doctest-modules --junitxml=junit/test-results.xml 
+      echo $(pytestfiles)
+      pip install pytest && pytest $(pytestfiles) --doctest-modules --junitxml=junit/test-results.xml 
     displayName: 'pytest'
     continueOnError: true
 
