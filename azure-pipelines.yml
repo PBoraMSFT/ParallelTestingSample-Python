@@ -23,7 +23,7 @@ jobs:
   - script: |
     echo %pytestfiles%
     pip install pytest && pytest %pytestfiles% --doctest-modules --junitxml=junit/test-results.xml 
-    displayName: pytest
+  displayName: pytest
   continueOnError: true
 
   - task: PublishTestResults@2
