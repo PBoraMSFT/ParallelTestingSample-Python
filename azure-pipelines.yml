@@ -21,10 +21,10 @@ jobs:
     displayName: 'PowerShell Script to distribute tests'
 
   - script: |
-    echo %pytestfiles%
-    pip install pytest && pytest %pytestfiles% --doctest-modules --junitxml=junit/test-results.xml 
-  displayName: 'pytest'
-  continueOnError: true
+      echo %pytestfiles%
+      pip install pytest && pytest %pytestfiles% --doctest-modules --junitxml=junit/test-results.xml 
+    displayName: 'pytest'
+    continueOnError: true
 
   - task: PublishTestResults@2
     displayName: 'Publish Test Results **/test-results.xml'
