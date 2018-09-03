@@ -1,6 +1,6 @@
 $tests = Get-ChildItem .\ -Filter "test*"
-$totalAgents = [int]$Env:System_TotalJobsInPhase
-$agentNumber = [int]$Env:System_JobPositionInPhase
+$totalAgents = [int]$Env:SYSTEM_TOTALJOBSINPHASE
+$agentNumber = [int]$Env:SYSTEM_JOBPOSITIONINPHASE
 $testCount = $tests.Count
 Write-Host "Total agents: $totalAgents"
 Write-Host "Agent number: $agentNumber"
