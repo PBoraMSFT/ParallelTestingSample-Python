@@ -3,7 +3,7 @@
     Distribute the tests in VSTS pipeline across multiple agents 
 .DESCRIPTION  
     This script slices tests files across multiple agents for faster execution.
-    We search for specific type of file structure (in this example *spec.js), and slice them according to agent number
+    We search for specific type of file structure (in this example test*), and slice them according to agent number
     If we encounter multiple files [file1..file10] and if we have 2 agents, agent1 executes tests odd number of files while agent2 executes even number of files
     We use JUnit test results to publish the test reports.
 #>
