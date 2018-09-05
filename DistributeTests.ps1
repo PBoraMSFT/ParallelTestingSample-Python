@@ -13,10 +13,6 @@ $totalAgents = [int]$Env:SYSTEM_TOTALJOBSINPHASE # standard VSTS variables avail
 $agentNumber = [int]$Env:SYSTEM_JOBPOSITIONINPHASE  # current job position
 $testCount = $tests.Count
 
-Write-Host "Total agents: $totalAgents"
-Write-Host "Agent number: $agentNumber"
-Write-Host "Total tests: $testCount"
-
 # below conditions are used if parallel pipeline is not used. i.e. pipeline is running with single agent (no parallel configuration)
 if ($totalAgents -eq 0) {
     $totalAgents = 1
@@ -24,6 +20,10 @@ if ($totalAgents -eq 0) {
 if (!$agentNumber -or $agentNumber -eq 0) {
     $agentNumber = 1
 }
+
+Write-Host "Total agents: $totalAgents"
+Write-Host "Agent number: $agentNumber"
+Write-Host "Total tests: $testCount"
 
 $testsToRun= @()
 
